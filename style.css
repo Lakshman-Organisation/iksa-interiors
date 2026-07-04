@@ -1,5 +1,5 @@
 /* ========================================
-   IKSA ARCHITECTS — Luxury Design System
+   IKSA INTERIORS — Luxury Design System
    Premium Interior Design Portfolio
    ======================================== */
 
@@ -846,11 +846,6 @@ p {
   flex-direction: column;
   justify-content: flex-end;
   padding: 28px;
-  opacity: 0;
-  transition: opacity 0.4s var(--ease);
-}
-
-.portfolio-item:hover .portfolio-item-overlay {
   opacity: 1;
 }
 
@@ -874,118 +869,10 @@ p {
 }
 
 /* ============================================================
-   09. BEFORE & AFTER COMPARISON
-   ============================================================ */
-.before-after {
-  background: var(--white);
-}
-
-.before-after-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.before-after-header .section-desc {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.ba-slider {
-  position: relative;
-  max-width: 900px;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: var(--radius);
-  aspect-ratio: 16 / 10;
-  cursor: col-resize;
-  user-select: none;
-}
-
-.ba-image {
-  position: absolute;
-  inset: 0;
-}
-
-.ba-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.ba-image.before {
-  clip-path: inset(0 50% 0 0);
-  z-index: 1;
-}
-
-.ba-image.after {
-  z-index: 0;
-}
-
-.ba-handle {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 3px;
-  background: var(--white);
-  z-index: 3;
-  cursor: col-resize;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
-}
-
-.ba-handle-circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--white);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--primary);
-  z-index: 4;
-}
-
-.ba-handle-circle svg {
-  width: 20px;
-  height: 20px;
-}
-
-.ba-label {
-  position: absolute;
-  top: 20px;
-  z-index: 5;
-  padding: 6px 16px;
-  border-radius: var(--radius);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.ba-label.label-before {
-  left: 20px;
-  background: rgba(15, 23, 42, 0.7);
-  color: var(--white);
-  backdrop-filter: blur(8px);
-}
-
-.ba-label.label-after {
-  right: 20px;
-  background: rgba(198, 167, 106, 0.9);
-  color: var(--primary);
-}
-
-/* ============================================================
    10. WHY CHOOSE IKSA
    ============================================================ */
 .why-us {
-  background: var(--secondary);
+  background: var(--white);
 }
 
 .why-us-header {
@@ -1055,7 +942,7 @@ p {
    11. DESIGN PROCESS TIMELINE
    ============================================================ */
 .process {
-  background: var(--white);
+  background: var(--secondary);
 }
 
 .process-header {
@@ -1128,226 +1015,6 @@ p {
 }
 
 /* ============================================================
-   12. MATERIALS & BRAND PARTNERS
-   ============================================================ */
-.partners {
-  background: var(--secondary);
-  padding: 80px 0;
-}
-
-.partners-header {
-  text-align: center;
-  margin-bottom: 48px;
-}
-
-.partners-marquee {
-  overflow: hidden;
-}
-
-.partners-track {
-  display: inline-flex;
-  gap: 80px;
-  align-items: center;
-  animation: marquee 25s linear infinite;
-}
-
-.partner-name {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: var(--grey);
-  opacity: 0.35;
-  white-space: nowrap;
-  transition: all 0.3s;
-  cursor: default;
-}
-
-.partner-name:hover {
-  opacity: 1;
-  color: var(--accent);
-}
-
-/* ============================================================
-   13. STATISTICS
-   ============================================================ */
-.stats {
-  background: var(--primary);
-  padding: 100px 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.stats::before {
-  content: "";
-  position: absolute;
-  top: -40%;
-  right: -15%;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(
-    circle,
-    rgba(198, 167, 106, 0.06) 0%,
-    transparent 70%
-  );
-  border-radius: 50%;
-}
-
-.stats::after {
-  content: "";
-  position: absolute;
-  bottom: -30%;
-  left: -10%;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(
-    circle,
-    rgba(30, 142, 90, 0.04) 0%,
-    transparent 70%
-  );
-  border-radius: 50%;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-.stat-item {
-  padding: 20px;
-  position: relative;
-}
-
-.stat-item:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  width: 1px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.stat-number {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  font-weight: 700;
-  color: var(--accent);
-  line-height: 1;
-  margin-bottom: 8px;
-}
-
-.stat-suffix {
-  font-size: clamp(1.5rem, 3vw, 2rem);
-}
-
-.stat-label {
-  font-size: 0.82rem;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.45);
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-
-/* ============================================================
-   14. CLIENT TESTIMONIALS
-   ============================================================ */
-.testimonials {
-  background: var(--white);
-}
-
-.testimonials-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.testimonials-header .section-desc {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.testimonial-carousel {
-  max-width: 800px;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-}
-
-.testimonial-track {
-  display: flex;
-  transition: transform 0.6s var(--ease);
-}
-
-.testimonial-slide {
-  min-width: 100%;
-  padding: 0 20px;
-}
-
-.testimonial-content {
-  text-align: center;
-}
-
-.testimonial-quote-icon {
-  font-size: 5rem;
-  line-height: 1;
-  color: var(--accent);
-  opacity: 0.25;
-  font-family: Georgia, "Times New Roman", serif;
-  margin-bottom: -16px;
-  user-select: none;
-}
-
-.testimonial-text {
-  font-size: clamp(1rem, 1.5vw, 1.15rem);
-  color: var(--text);
-  line-height: 1.85;
-  font-weight: 400;
-  font-style: italic;
-  margin-bottom: 32px;
-}
-
-.testimonial-author {
-  font-weight: 600;
-  color: var(--text);
-  font-size: 1rem;
-}
-
-.testimonial-role {
-  color: var(--accent);
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin-top: 4px;
-}
-
-.testimonial-dots {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 48px;
-  margin-bottom: 6px;
-}
-
-.testimonial-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(198, 167, 106, 0.2);
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s;
-  padding-bottom: 1;
-}
-
-.testimonial-dot.active {
-  background: var(--accent);
-  transform: scale(1.3);
-}
-
-/* ============================================================
    15. CONSULTATION CTA
    ============================================================ */
 .cta-section {
@@ -1373,7 +1040,7 @@ p {
   background: linear-gradient(
     135deg,
     rgba(15, 23, 42, 0.93) 0%,
-    rgba(15, 23, 42, 0.82) 100%
+    rgba(15, 23, 42, 0.82) 70%
   );
 }
 
@@ -1404,108 +1071,6 @@ p {
   max-width: 480px;
   margin-left: auto;
   margin-right: auto;
-}
-
-/* ============================================================
-   16. FAQ
-   ============================================================ */
-.faq {
-  background: var(--secondary);
-}
-
-.faq-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.faq-header .section-desc {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.faq-list {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.faq-item {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-.faq-question {
-  width: 100%;
-  padding: 24px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  font-size: 1.02rem;
-  font-weight: 500;
-  color: var(--text);
-  text-align: left;
-  cursor: pointer;
-  transition: color 0.3s;
-  background: none;
-}
-
-.faq-question:hover {
-  color: var(--accent);
-}
-
-.faq-toggle {
-  width: 28px;
-  height: 28px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  border: 1.5px solid var(--accent);
-  position: relative;
-  transition: all 0.3s var(--ease);
-  font-size: 0;
-}
-
-.faq-toggle::before,
-.faq-toggle::after {
-  content: "";
-  position: absolute;
-  background-color: var(--accent);
-  transition: all 0.3s var(--ease);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.faq-toggle::before {
-  width: 12px;
-  height: 1.5px;
-}
-
-.faq-toggle::after {
-  width: 1.5px;
-  height: 12px;
-}
-
-.faq-item.active .faq-toggle {
-  background: var(--accent);
-  transform: rotate(45deg);
-}
-
-.faq-item.active .faq-toggle::before,
-.faq-item.active .faq-toggle::after {
-  background-color: var(--white);
-}
-
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s var(--ease);
-}
-
-.faq-answer-inner {
-  padding-bottom: 24px;
-}
-
-.faq-answer p {
-  font-size: 0.95rem;
 }
 
 /* ============================================================
@@ -2175,14 +1740,7 @@ p {
   }
 
   /* Stats */
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-  }
-
-  .stat-item:nth-child(2)::after {
-    display: none;
-  }
+  /* (section removed) */
 
   /* Contact */
   .contact-grid {
@@ -2294,16 +1852,6 @@ p {
     text-align: center;
   }
 
-  /* Partners */
-  .partners {
-    padding: 48px 0;
-  }
-
-  /* Testimonials */
-  .testimonial-quote-icon {
-    font-size: 3.5rem;
-  }
-
   /* Mobile Menu */
   .mobile-menu-link {
     font-size: 1.4rem;
@@ -2346,23 +1894,7 @@ p {
     font-size: 1.8rem;
   }
 
-  .stats-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .stat-item {
-    padding: 16px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  }
-
-  .stat-item:last-child {
-    border-bottom: none;
-  }
-
-  .faq-question {
-    font-size: 0.92rem;
-  }
-
+  /* CTA */
   .cta-section {
     padding: 80px 0;
   }
